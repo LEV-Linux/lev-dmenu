@@ -14,14 +14,14 @@ static const char *prompt      = NULL;      /* -p  option; prompt to the left of
 #if __has_include(pywal)
 #include pywal
 #else
-static const char *colors[SchemeLast][2]
- 	/*     fg         bg       */
- 	[SchemeNorm] = { "#bbbbbb", "#222222" },
- 	[SchemeSel] = { "#eeeeee", "#005577" },
-	[SchemeSelHighlight] = { "#ffc978", "#005577" },
-	[SchemeNormHighlight] = { "#ffc978", "#222222" },
- 	[SchemeOut] = { "#000000", "#00ffff" },
- };
+static const char *colors[SchemeLast][2] = {
+	/*     fg         bg       */
+	[SchemeNorm] =		{ "#fbf1c7", "#32302f" },
+	[SchemeSel] =		{ "#fbf1c7", "#fb4934" },
+	[SchemeSelHighlight] = 	{ "#8ec07c", "#fb4934" },
+	[SchemeNormHighlight] =	{ "#8ec07c", "#32302f" },
+	[SchemeOut] = 		{ "#fbf1c7", "#8ec07c" },
+};
 #endif
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;
